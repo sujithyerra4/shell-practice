@@ -2,10 +2,10 @@
 
 /var/log/shell-practice/15-redirectors-<timestamp>.log
 
-LOG_FOLDER=/var/log/shell-practice
-SCRIPT_NAME=echo $0 | awk -F "." '{print $1}'
+LOG_FOLDER="/var/log/shell-practice"
+SCRIPT_NAME="echo $0 | awk -F "." '{print $1}'"
 TIME_STAMP= $(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE=  $LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log 
+LOG_FILE= " $LOG_FOLDER/$SCRIPT_NAME-$TIME_STAMP.log "
 mkdir -p $LOG_FOLDER
 R="\e[31m"
 G="\e[32m"
