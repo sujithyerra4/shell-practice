@@ -20,9 +20,8 @@ VALIDATE(){
    then
    echo -e "$2  installion is $R failure $N"
    else
-   echo  -e "$2 installion is $G success $N"
+   echo -e "$2 installion is $G success $N"
    fi
-
 }
 
 
