@@ -18,9 +18,10 @@ VALIDATE(){
 
   if [ $1 -ne 0 ]
    then
-   echo -e "$2  installion is $R failure $N"
+   echo -e "$2 is $R failure $N"
+   exit1
    else
-   echo -e "$2 installion is $G success $N"
+   echo -e "$2 is $G success $N"
    fi
 }
 
@@ -31,7 +32,7 @@ if [ $? -ne 0 ]
 then
   echo "git is not installed, going to install it" 
    dnf install git -y
-   VALIDATE $? git
+   VALIDATE $? "Installing  git"
    else
     echo -e "git is already $Y installed $N"
    fi
@@ -43,7 +44,7 @@ then
  then 
   echo "Nginx is not installed, going to install it"
      dnf install nginx -y
-   VALIDATE $? nginx
+   VALIDATE $? "Installing nginx"
 else
  echo -e "Nginx is already $Y installed $N"
  fi
