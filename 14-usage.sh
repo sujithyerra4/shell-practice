@@ -6,23 +6,24 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-USAGE(){
-
-    echo " $R USAGE $N :sudo sh.14-usage.sh git nginx mysql...."
-    exit 1
-}
-
-
 
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
-# echo "please proceed with root privilages"
-USAGE
-
+ echo "please proceed with root privilages"
 fi
+USAGE(){
 
+    echo -e " $R USAGE $N :sudo sh.14-usage.sh git nginx mysql...."
+    exit 1
+}
+
+if [ $# -eq 0 ]
+then
+ USAGE
+ fi
+  
 VALIDATE(){
 
   if [ $1 -ne 0 ]
