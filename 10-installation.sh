@@ -23,3 +23,20 @@ then
 else
  echo "Nginx is already installed"
  fi
+
+dnf list installed git
+
+ if [ $? -ne 0 ]
+ then 
+  echo "git is not installed, going to install it"
+     dnf install git -y
+   if [ $? -ne 0 ]
+   then
+   echo "git  installion is failure"
+   else
+   echo "git installion is success"
+   fi
+else
+ echo "git is already installed"
+ fi
+
