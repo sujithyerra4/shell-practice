@@ -31,7 +31,7 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 echo Files:$FILES
 
-if [ !-z FILES ]
+if [ ! -z FILES ]
     then
     echo files are found
     ZIP_FILE=$DESTINATION_DIR/app-logs-$TIME_STAMP.zip
