@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK= df -hT|grep xfs
+DISK=$(df -hT|grep xfs)
 THRESHOLD=5
 
 
