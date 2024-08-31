@@ -20,7 +20,7 @@ if [ $USERID -ne 0 ]
 then 
 # echo "please proceed with root privilages"
 USAGE
-exit 1
+
 fi
 
 VALIDATE(){
