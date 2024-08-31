@@ -1,6 +1,6 @@
 #!/bin/bash
 
-id=0
+root=$(id)
 
 if [ $? -ne 0 ]
 then
