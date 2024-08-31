@@ -30,7 +30,7 @@ then
  USAGE
  fi
 
-echo script started executing at : $(date) | tee -a $LOG_FILE
+echo "script started executing at : $(date)" | tee -a $LOG_FILE
 
 VALIDATE(){
 
