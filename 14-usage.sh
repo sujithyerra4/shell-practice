@@ -8,16 +8,18 @@ N="\e[0m"
 
 USAGE(){
 
-    echo "sh.14-usage.sh git nginx mysql...."
+    echo " $R USAGE $N :sudo sh.14-usage.sh git nginx mysql...."
+    exit 1
 }
 
-USAGE
+
 
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
-echo "please proceed with root privilages"
+# echo "please proceed with root privilages"
+USAGE
 exit 1
 fi
 
