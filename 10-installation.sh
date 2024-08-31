@@ -8,7 +8,7 @@ then
  exit 1
  fi
 
- dnf lit installed nginx
+ dnf list installed nginx
 
  if [ $? -ne 0 ]
  then 
