@@ -8,7 +8,7 @@ TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 USAGE(){
 
-echo -e  "$R USAGE $N: $0 <source> <destination> <days(optional)>"
+echo -e  "$R USAGE $N: sudo sh $0 <source> <destination> <days(optional)>"
 
 }
 
