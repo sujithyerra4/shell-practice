@@ -15,7 +15,7 @@ then
 fi
 USAGE(){
 
-    echo -e " $R USAGE $N :sudo sh.14-usage.sh git nginx mysql...."
+    echo -e " $R USAGE $N :sudo sh.14-usage.sh package1  package2 package3...."
     exit 1
 }
 
@@ -23,7 +23,7 @@ if [ $# -eq 0 ]
 then
  USAGE
  fi
-  
+
 VALIDATE(){
 
   if [ $1 -ne 0 ]
