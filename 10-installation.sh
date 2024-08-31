@@ -1,8 +1,8 @@
 #!/bin/bash
 
-root=$(id)
+USERID=$(id -u)
 
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then
  echo "please proceed with root privilages"
  exit 1
