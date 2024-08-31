@@ -39,11 +39,11 @@ dnf list installed git
 else
  echo "git is already installed"
 
- if [ $? -eq 0 ]
- then 
-    dnf remove git 
-    echo " git is uninstalled"
-fi 
+#  if [ $? -eq 0 ]
+#  then 
+#     dnf remove git 
+#     echo " git is uninstalled"
+# fi 
 
  fi
 
