@@ -28,14 +28,15 @@ then
  echo $DESTINATION_DIR doesnt exists
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+FILES=$(find $SOURCE_DIR -name "*.txt" -mtime +14)
 echo Files:$FILES
 
-if [ ! -z FILES ]
+if [ ! -z $FILES ]  #true only if files are epmty if files are not empty it gives false , then reslut will go to else
+#instead of this we can also use  -n or -f
     then
     echo files are found
     ZIP_FILE=$DESTINATION_DIR/app-logs-$TIME_STAMP.zip
-    find $SOURCE_DIR -name "*.log" -mtime +14| zip $ZIP_FILE -@
+    find $SOURCE_DIR -name "*.txt" -mtime +14| zip $ZIP_FILE -@
 
         if [ -f $ZIP_FILE ]
         then 
