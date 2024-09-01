@@ -2,7 +2,7 @@
 
 SOURCE_DIR=$1
 DESTINATION_DIR=$2
-DAYS=${3: -14}
+DAYS=${3:-14}
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 
@@ -28,14 +28,14 @@ then
  echo $DESTINATION_DIR doesnt exists
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime "+$DAYS")
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +"$DAYS")
 echo Files:$FILES
 
 if [ ! -z "$FILES" ]  
     then
     echo files are found
     ZIP_FILE=$DESTINATION_DIR/app-logs-$TIME_STAMP.zip
-    find $SOURCE_DIR -name "*.log" -mtime "+$DAYS"| zip $ZIP_FILE -@
+    find $SOURCE_DIR -name "*.log" -mtime +"$DAYS"| zip $ZIP_FILE -@
 
         if [ -f $ZIP_FILE ]
         then 
