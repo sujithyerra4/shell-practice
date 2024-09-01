@@ -32,10 +32,6 @@ FILES=$(find $SOURCE_DIR -name "*.txt" -mtime +14)
 echo Files:$FILES
 
 if [ ! -z $FILES ]  
-
-#true only if files are epmty if files are not empty it gives false , then reslut will go to else
-#instead of this we can also use  -n or -f
-
     then
     echo files are found
     ZIP_FILE=$DESTINATION_DIR/app-logs-$TIME_STAMP.zip
@@ -58,3 +54,8 @@ if [ ! -z $FILES ]
 else
   echo files are not found
 fi
+
+
+
+#true only if files are epmty if files are not empty it gives false , then reslut will go to else
+#instead of this we can also use  -n or -f
